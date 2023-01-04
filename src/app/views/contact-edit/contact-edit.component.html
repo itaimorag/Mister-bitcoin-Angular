@@ -1,0 +1,33 @@
+<section class='contact-edit'>
+    <h1>{{contact._id ? 'Edit' : 'Add'}} Contact</h1>
+    <nav>
+        <button class='back-btn' (click)="onBack()"><img class="delete-btn" src="https://res.cloudinary.com/mello123/image/upload/v1672829689/fustwptlotopvrx7vgqg.png" alt=""></button>
+            <button *ngIf="contact._id" (click)="onRemoveContact(contact._id)"><img class="delete-btn" src="https://res.cloudinary.com/mello123/image/upload/v1672829689/oyubuk4dtsj9wqfbfnzp.png" alt=""></button>
+    </nav>
+    <form (ngSubmit)="onSaveContact()">
+    <img *ngIf="contact._id; else newUserImg" class='user-img' src="https://avatars.dicebear.com/api/micah/{{contact._id}}.svg" alt=""/>
+    <ng-template #newUserImg>
+        <img class='user-img' src="https://res.cloudinary.com/mello123/image/upload/v1672829690/btbj9n5nzrsj7wlt7yw8.png" alt=""/>
+    </ng-template>
+    <div>
+        <section class='edit-user-field'>
+            <label for="name">Name:  </label>
+            <input [(ngModel)]="contact.name" type="text" name="name" id="name" placeholder='Enter full name'/>
+        </section>
+        
+        <section class='edit-user-field'>
+            <label for="email">Email: </label>
+            <input [(ngModel)]="contact.email" type="text" name="email" id="email" placeholder='Enter email address'/>
+        </section>
+
+        <section class='edit-user-field'>
+            <label for="phone">Phone: </label>
+            <input [(ngModel)]="contact.phone" type="text" name="phone" id="phone" placeholder='Enter phone number'/>
+        </section>
+        <div class="save-btn-container">
+            <button>Save</button>
+        </div>
+   
+        </div>
+    </form>
+</section>

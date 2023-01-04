@@ -1,0 +1,22 @@
+<section class="transactions-list">
+    <h1>{{title}}</h1>
+    <div *ngIf="isHome; then home else details"></div>
+    <ng-template #home>
+        <section *ngFor="let transaction of transactions">
+            <section class="transaction">
+                <div>To: {{transaction.to}}</div>
+                <div>At: {{transaction.at | date: 'dd-MM-yyyy hh:mm a'}}</div>
+                <div>Amount: {{transaction.amount|currency}}</div>
+            </section>
+        </section>
+    </ng-template>
+    <ng-template #details>
+        <section *ngFor="let transaction of transactions">
+            <section class="transaction">
+                <div>From: {{transaction.from}}</div>
+                <div>At: {{transaction.at | date: 'dd-MM-yyyy hh:mm a'}}</div>
+                <div>Amount: {{transaction.amount|currency}}</div>
+            </section>
+        </section>
+    </ng-template>
+</section>

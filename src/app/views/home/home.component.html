@@ -1,0 +1,13 @@
+<section class='home-page'>
+    <h1>Mister BITcoin</h1>
+    <div class="user-container">
+        <section class="user-info">
+            <h2>Hello: {{user.name}}!</h2>
+            <div><span>💰 coins: {{user.coins}}</span></div>
+            <div><span>💸 BTC: {{bitcoinRate|async}}</span></div>
+        </section>
+        <img src="https://res.cloudinary.com/mello123/image/upload/v1672829689/jg0xxndt8cuw11momz77.png" />
+        <transactions-list *ngIf="transactions.length" [transactions]="transactions"
+            [title]="title"></transactions-list>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+.main-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        display: flex;
+        align-items: center;
+        background: linear-gradient( rgba(255, 194, 72, 0.614), rgba(255, 185, 72, 0.34));
+        color: #000;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+    }
+
+    main {
+        flex-grow: 1;
+        background-color: #151515;
+    }
+
+    footer {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        color: #000;
+        background: linear-gradient( rgba(255, 194, 72, 0.614), rgba(255, 185, 72, 0.34));
+        font-size: 1.2em;
+    }
+}

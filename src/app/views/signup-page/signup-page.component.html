@@ -1,0 +1,15 @@
+<section class='signup-page'>
+<div class = 'sign-container'>
+
+    <!-- <img src="../../../assets/imgs/bitcoin-graphic.webp" alt="" /> -->
+    <h2>Please enter your name:</h2>
+    <form #form="ngForm" (ngSubmit)="onSignup(form)">
+        <label for="name">Name: </label>
+        <input ngModel type="text" name="name" id="name" placeholder='Enter full name' />
+        <div>
+            <button>Sign up</button>
+        </div>
+    </form>
+</div>
+   
+</section>

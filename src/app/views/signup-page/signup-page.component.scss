@@ -1,0 +1,41 @@
+.signup-page{
+
+    background-image: url("https://res.cloudinary.com/mello123/image/upload/v1672829689/t6izakrwvdtinb0lsxsp.webp" );
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    margin-inline-start: -10vw;
+    background-repeat: round;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    gap: 30px;
+    .sign-container{
+
+        margin: auto auto;
+        font-weight: 800;
+        h2{
+        font-size: 40px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    img{
+        width:100px;
+        height:60px;
+        border-radius: 5px;
+        margin-top: 150px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        // button{
+            
+            // }
+        }
+    }
+  
+    
+
+}

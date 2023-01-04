@@ -1,0 +1,14 @@
+<section [routerLink]="['/contact', contact._id]" (click)="onSelectContactId()" class="contact-preview">
+    <section class="info">
+        <section class="data">
+            <p>Name: {{contact.name}}</p>
+            <p>Email: {{contact.email}}</p>
+            <p>Phone: {{contact.phone}}</p>
+        </section>
+        <section class="actions">
+            <button (click)="onRemoveContact($event)" class="remove-btn"><img src="https://res.cloudinary.com/mello123/image/upload/v1672829689/oyubuk4dtsj9wqfbfnzp.png" alt=""></button>
+            <button (click)="onEditContact($event)" class="edit-btn"><img src="https://res.cloudinary.com/mello123/image/upload/v1672829690/gtoutqck4np7d7bljblx.png" alt=""></button>
+        </section>
+    </section>
+    <img src="https://avatars.dicebear.com/api/micah/{{contact._id}}.svg" alt="">
+</section>
